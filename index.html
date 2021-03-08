@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="dist/main.js"defer></script>
+
+<body>
+    </head>
+    <header>
+        <title>Brandon</title>
+        <h1>About Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html .html">Contact</a></li>
+                <li><a href="Countdown.html">The Big countdown</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <p>The Current Time</p>
+        <P id = "clock"></P>
+        <p id="countdown"></p>
+        <h2>Hello, my name is Brandon Jackson.</h2>
+        <p>Hello, welcome to my page. In 2018 revceived my Bachelors degree in Public history at Western Michigan University. 
+        During my undergrad I studied abroad in Cape Town South Africa for seven months. 
+        After commpleteing an academic semester at the University of Cape Town,
+        I did an Internship at Robben Island Musuem, where I conducted research on how Robben Island was utilized for coastal defense during WWII. 
+        When I retuned home I also interned aboard the USS Lexington Musuem in Corpus Christie Texas,  as an assitant curator. 
+        Today I currently attend the University of Michigan School of Infromation in Ann Arbor Michigan. I am in the MSI program studying Digital Curation. 
+        My dream is to become a data curator.</p>
+    <p>Click the button for Daily Quote,check bottom of page for Quote.</p>
+    <button onclick="myQuote()"> Daily Quote</button>
+        <p> Fun  Facts About me! Click the buttons to find out </p>
+    <div>
+            <ul>
+                <li><button id ="FunFact1">Fun Fact 1!</button></li>
+                <li><button id ="FunFact2">Fun Fact 2!</button></li>
+                <li><button id ="FunFact3">Fun Fact 3!</button></li>
+    </div>  </ul>
+        <p>My hobbies are:</p>
+        <ul>
+            <li>History</li>
+            <li>Gaming</li>
+            <li>Cooking</li>
+        </ul>
+        <p>In that order!</p>
+
+    </section>
+<section>
+    <p>Here is a picture of me at Victoria Falls, in Zimbabwe.</p>
+    <img src="zimvictoirafalls.jpg" alt="Victoria Falls">
+    <p id="context">When I was studying at UCT for spring break I travled to Zimbabwe</p>
+    <button onclick="myContext()">Remove paragraph</button>
+</section>
+</head>
+
+    
+    
+<button onclick="myFunction()">Dark Mode</button>
+</body> 
+<footer> Brandon E. Jackson SI 579 2021. </footer>
+
+<style> 
+footer {
+    text-align: center;
+}
+img {
+    border-radius: 8px;
+}
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+}
+    
+.dark-mode {
+    background-color: black;
+    color: white;
+    }
+
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) { }
+</style>
+
+<script>
+    document.getElementById("dark-mode").addEventListener("click", myFunction());
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+myFunction();
+
+function myQuote() {
+        var x = document.createElement("TEXTAREA");
+        var t = document.createTextNode("The Biggest Room in the World is the room for Improvement.");
+        x.appendChild(t);
+        document.body.appendChild(x);
+}
+function myContext() {
+        var myobj = document.getElementById("context");
+        myobj.remove();
+}
+
+</script>
+
